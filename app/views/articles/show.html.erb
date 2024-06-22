@@ -1,0 +1,11 @@
+<div>
+  <p>Wikiminous</p>
+  <p><%= button_to "Edit", edit_article_path, method: :get %></p>
+</div>
+<div class="container">
+  <h3><%=@article.title%></h3>
+  <p><%=@article.content%></p>
+</div>
+
+<%=link_to "Back to home page", articles_path%>
+<%=link_to "Delete", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
